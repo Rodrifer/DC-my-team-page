@@ -153,6 +153,10 @@ header {
         font-size: .9rem;
     }
 
+    .header__content {
+        width: 80%;
+    }
+
     .team {
         grid-template-columns: repeat(3, 1fr);
     }
