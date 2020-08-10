@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Fonts */
+:root {
+    --fs-body: 1rem;
+    --fs-footer: .75rem;
+    --fs-small: .55rem;
+
+    --ff-pt-serif: 'PT Serif', serif;
+    --ff-poppins: 'Poppins', sans-serif;
+    --ff-monserrat: 'Montserrat', sans-serif;
+
+}
+
+/* Colors */
+:root {
+    --gray-1: #A9A9A9;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body {
+    margin: 0;
+    font-family: var(--ff-poppins);
+    font-weight: 400;
+    font-size: var(--fs-body);
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 1rem;
+    color: #000000;
+    min-height: 100vh;
+}
+
+/* Page */
+
+.main {
+    position: relative;
+    height: 100%;
+}
+
+header {
+    display: grid;
+}
+
+.header__title {
+    font-family: var(--ff-pt-serif);
+    font-weight: 700;
+    font-size: .9rem;
+    margin-bottom: 2rem;
+}
+
+.header__legend {
+    font-size: .9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.header__content {
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+.header__description {
+    margin-bottom: 2rem;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    max-width: 100%;
+}
+
+.person:nth-child(even) {
+    padding-top: 3rem;
+}
+
+.person__card {
+    position: relative;
+}
+
+.person__img {
+    width: 90%;
+}
+
+.person__position {
+    font-family: var(--ff-pt-serif);
+    font-size: .5rem;
+    text-transform: uppercase;
+    transform: rotate(90deg);
+    position: absolute;
+    display: block;
+    transform-origin: 0 0;
+    top: 0;
+    right: -100%;
+    left: 100%;
+}
+
+.person__name {
+    font-family: var(--ff-poppins);
+    font-weight: 700;
+    font-size: .9rem;
+    margin-top: .5rem;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-family: var(--ff-monserrat);
+    font-size: var(--fs-footer);
+    color: var(--gray-1);
+    margin-top: 4rem;
+}
+
+@media screen and (min-width: 960px) {
+    body {
+        padding-top: 5rem;
+    }
+
+    .header {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 1rem;
+    }
+
+    .header__title {
+        font-size: .8rem;
+    }
+
+    .header__legend {
+        font-size: .9rem;
+    }
+
+    .team {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .person:nth-child(4),
+    .person:nth-child(6) {
+        padding-top: 0;
+    }
+
+    .person:nth-child(2),
+    .person:nth-child(5) {
+        padding-top: 3rem;
+    }
+
+    .person__position {
+        font-size: .7rem;
+        right: -100%;
+        left: 97%;
+    }
+}
